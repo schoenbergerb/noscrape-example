@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "example";
+  src: url("/fonts/example/example.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 html,
 body {
   padding: 0;

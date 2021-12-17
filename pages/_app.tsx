@@ -1,8 +1,23 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <div>
+    <Head>
+          <link
+            rel="preload"
+            href="/fonts/example/example.ttf"
+            as="font"
+            crossOrigin=""
+        />
+    </Head>
+    <body>
+      <Component {...pageProps} />
+    </body>
+  </div>
+  
+  
 }
 
 export default MyApp
