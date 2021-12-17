@@ -6,7 +6,11 @@ import obfuscate from '@noscrape/noscrape'
 export async function getStaticProps() {
   const data = {
     headline: "Welcome to noscrape :)",
-    textline1: "can you programmatically read this content?" 
+    textline1: "can you programmatically read this content?",
+    linksHead: "sources:",
+    example1: "nextjs-example",
+    example2: "@noscript/noscript",
+
   }
 
   const { value, font } = await obfuscate(data, __dirname+'/../../../public/fonts/example/example.ttf')
@@ -17,7 +21,6 @@ export async function getStaticProps() {
     } 
   }
 }
-
 
 const Home: NextPage = ({ value, font }: any) => {
 
@@ -48,6 +51,14 @@ const Home: NextPage = ({ value, font }: any) => {
         <p className={styles.description}>
           { value.textline1 }
         </p>
+
+        <p className={styles.links}>
+          <h3>{ value.linksHead }</h3>
+          <br />
+          <a href="https://github.com/schoenbergerb/noscrape-nexample" target='_blank'>{ value.example1 }</a><br /><br />
+          <a href="https://github.com/schoenbergerb/noscrape" target='_blank'>{ value.example2 }</a>
+        </p>
+
       </main>
     </div>
   )
