@@ -37,7 +37,7 @@ const Home: NextPage = ({ value, font }: any) => {
         <title>@noscrape</title>
         <meta
           name="description"
-          content="protection of webcontent, can you programmatically scrape this content? 🤔"
+          content="protection of webcontent, can you programmatically read this content? 🤔"
         />
         <link rel="icon" href="/favicon.ico" />
         <style>{fontStyle}</style>
