@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import obfuscate from '@noscrape/noscrape'
+import Link from 'next/link'
 
 export async function getStaticProps() {
   const data = {
@@ -9,7 +10,7 @@ export async function getStaticProps() {
     textline1: "can you programmatically read this content?",
   }
 
-  const { value, font } = await obfuscate(data, __dirname+'/../../../public/fonts/example/example.ttf')
+  const { value, font } = await obfuscate(data, __dirname + '/../../../public/fonts/example/example.ttf')
 
   return { props: {
       value,
@@ -46,6 +47,10 @@ const Home: NextPage = ({ value, font }: any) => {
 
         <p className={styles.description}>
           { value.textline1 }
+        </p>
+
+        <p className={styles.description}>
+          <Link href="/dynamic">example 2</Link>
         </p>
 
       </main>

@@ -12,9 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             crossOrigin=""
         />
     </Head>
-    <body>
-      <Component {...pageProps} />
-    </body>
+    <Component {...pageProps} />
   </div>
   
   

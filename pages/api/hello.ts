@@ -1,13 +1,22 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import obfuscate from '@noscrape/noscrape'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-  name: string
+  text1: string,
+  text2: string,
+  text3: string,
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
+export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+
+  const data = {
+    text1: "this text was obfuscated on the server",
+    text2: "fetched via axios request",
+    text3: "and rendered via next functional component",
+  }
+
+  const { value, font } = await obfuscate(data, __dirname + '/../../../../public/fonts/example/example.ttf', { strength: 10 })
+
+  return res.status(200).setHeader('obfuscation', font.toString('base64')).json(value)
+
 }

@@ -34,10 +34,14 @@
 .links {
   margin: 4rem 0;
   line-height: 1;
-  font-size: 1rem;
-  font-family: 'noscrape-obfuscated';
 }
 
 .links a {
   color: #008;
+}
+
+.example2Text {
+  font-size: 1rem;
+  font-family: 'noscrape-obfuscated';
+  margin: .2rem;
 }
