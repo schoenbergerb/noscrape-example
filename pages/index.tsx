@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import obfuscate from "@noscrape/noscrape";
 import Link from "next/link";
+import obfuscate, { EncryptionCharakterRange } from '@noscrape/noscrape'
 
 export async function getStaticProps() {
   const data = {
@@ -12,7 +12,10 @@ export async function getStaticProps() {
 
   const { value, font } = await obfuscate(
     data,
-    __dirname + "/../../../public/fonts/example/example.ttf"
+    __dirname + "/../../../public/fonts/example/example.ttf",
+    {
+      characterRange: EncryptionCharakterRange.HIRAGANA
+    },
   );
 
   return {
