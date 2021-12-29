@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import obfuscate, { EncryptionCharakterRange } from '@noscrape/noscrape'
+import obfuscate, { EncryptionCharacterRange } from '@noscrape/noscrape'
 
 export async function getStaticProps() {
   const data = {
@@ -14,7 +14,7 @@ export async function getStaticProps() {
     data,
     __dirname + "/../../../public/fonts/example/example.ttf",
     {
-      characterRange: EncryptionCharakterRange.HIRAGANA
+      characterRange: EncryptionCharacterRange.HIRAGANA
     },
   );
 
