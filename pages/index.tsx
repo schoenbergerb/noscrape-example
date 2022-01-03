@@ -42,6 +42,7 @@ const Home: NextPage = ({ value, font }: any) => {
           name="description"
           content="protection of webcontent, can you programmatically read this content? 🤔"
         />
+        <meta name="google-site-verification" content="9vYw3s5f_GBy5SIzl-AV3PvhmWNt81D9h9b0YyXJ0ME" />
         <link rel="icon" href="/favicon.ico" />
         <style>{fontStyle}</style>
       </Head>
@@ -53,6 +54,11 @@ const Home: NextPage = ({ value, font }: any) => {
 
         <p className={styles.description}>
           <Link href="/dynamic">example 2</Link>
+        </p>
+
+
+        <p className={styles.description}>
+          <Link href="https://github.com/schoenbergerb/noscrape">Source-Code on Github</Link>
         </p>
       </main>
     </div>
