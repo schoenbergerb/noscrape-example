@@ -17,7 +17,7 @@ export default async function handler(
     text3: "and rendered via next functional component",
   };
 
-  const { value, font } = await obfuscate(
+  const { value, font } = await obfuscate<any>(
     data,
     __dirname + "/../../../../public/fonts/example/example.ttf",
     { strength: 10 }

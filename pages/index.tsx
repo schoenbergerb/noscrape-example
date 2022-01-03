@@ -10,7 +10,7 @@ export async function getStaticProps() {
     textline1: "can you programmatically read this content?",
   };
 
-  const { value, font } = await obfuscate(
+  const { value, font } = await obfuscate<any>(
     data,
     __dirname + "/../../../public/fonts/example/example.ttf",
     {
