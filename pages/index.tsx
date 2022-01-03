@@ -40,10 +40,11 @@ const Home: NextPage = ({ value, font }: any) => {
         <title>@noscrape</title>
         <meta
           name="description"
-          content="protection of webcontent, can you programmatically read this content? 🤔"
+          content="noscrape obfuscation should help you to protect your content form scraping. 
+          Or are you able to programmatically read this content? 🤔"
         />
         
-        <meta name="google-site-verification" content="uRFdJnhrcnPEnvAcvwmXrnVSnbOB7drtYuEJliTCEvc" />
+        
         <link rel="icon" href="/favicon.ico" />
         <style>{fontStyle}</style>
       </Head>
