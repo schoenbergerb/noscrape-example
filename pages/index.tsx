@@ -58,7 +58,7 @@ const Home: NextPage = ({ value, font }: any) => {
 
 
         <p className={styles.description}>
-          <Link href="https://github.com/schoenbergerb/noscrape">Source-Code on Github</Link>
+          <Link href="https://github.com/schoenbergerb/noscrape">sources on github</Link>
         </p>
       </main>
     </div>
