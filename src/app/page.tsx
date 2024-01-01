@@ -1,14 +1,30 @@
-import Test from "@/test";
-import Obfuscated from "@/components/Obfuscated";
+import Obfuscated from "@/components/noscrape/Obfuscated";
+import Image from "next/image";
+import Headline from "@/components/Headline";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="p-12">
-      <Test />
-      <Obfuscated label={"xyz1234"} />
-      <p></p>
-      <Obfuscated label={"fasöohuäeo4ohadyxvjcx9iypvilw,Re,fäsadCV:BX-X;VBCXVB;CXafds234525465647865798?/p9606ä"} />
+    <main className="flex justify-center items-center flex-col gap-8 align-middle h-screen">
+      <Image
+        src={
+          "https://raw.githubusercontent.com/schoenbergerb/noscrape/main/docs/preview.png"
+        }
+        alt={"noscrape"}
+        width={512}
+        height={512}
+      />
+      <Headline />
+      <span>
+        <Obfuscated label="can you scrape this contents?" />
+      </span>
+      <Link
+        href="https://github.com/schoenbergerb/noscrape"
+        target="_blank"
+        className="text-xs"
+      >
+        <Obfuscated label={"Sources on Github"} />
+      </Link>
     </main>
-  )
+  );
 }
-
