@@ -1,15 +1,8 @@
 import './globals.css'
 import type {Metadata} from 'next'
-import serverContext from 'server-only-context';
-
-import {EncryptionCharacterRange, Noscrape} from "@noscrape/noscrape";
 import {ReactNode} from "react";
 import NoscrapeFont from "@/components/NoscrapeFont";
 
-
-export const [useNoscrape, setNoscrape] = serverContext(new Noscrape('public/example.ttf', {
-    characterRange: EncryptionCharacterRange.HIRAGANA
-}))
 
 export const metadata: Metadata = {
     title: 'Create Next App',

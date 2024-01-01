@@ -1,6 +1,6 @@
 'server-only';
 
-import {useNoscrape} from "@/app/layout";
+import {useNoscrape} from "@/components/noscrape.context";
 
 const NoscrapeFont = () => {
     const noscrape = useNoscrape();

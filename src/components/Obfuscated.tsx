@@ -1,6 +1,6 @@
 'use server';
 
-import {useNoscrape} from "@/app/layout";
+import {useNoscrape} from "@/components/noscrape.context";
 
 const Obfuscated = ({ label }: { label: string }) => {
     const noscrape = useNoscrape();
