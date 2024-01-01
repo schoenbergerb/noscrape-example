@@ -2,7 +2,7 @@
 
 import { useNoscrape } from "@/components/noscrape/noscrape.context";
 
-const NoscrapeFont = async () => {
+const NoscrapeFontFace = async () => {
   const noscrape = useNoscrape();
 
   return (
@@ -12,9 +12,7 @@ const NoscrapeFont = async () => {
         __html: `                          
           @font-face {        
             font-family: 'noscrape-obfuscated';        
-            src: url('data:font/truetype;charset=utf-8;base64,${noscrape
-              .getFont()
-              .toString("base64")}');    
+            src: url('data:font/truetype;charset=utf-8;base64,${noscrape.getFont().toString("base64")}');    
           }
         
           .noscrape-obfuscated {
@@ -26,4 +24,4 @@ const NoscrapeFont = async () => {
   );
 };
 
-export default NoscrapeFont;
+export default NoscrapeFontFace;
