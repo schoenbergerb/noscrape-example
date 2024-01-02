@@ -13,6 +13,8 @@ export default function Home() {
         alt={"noscrape"}
         width={512}
         height={512}
+        style={{ width: "auto", height: "auto" }}
+        priority
       />
       <Headline />
       <span>
