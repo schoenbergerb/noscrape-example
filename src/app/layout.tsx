@@ -16,12 +16,12 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-    <head>
+      <head>
         <title>noscrape - demo</title>
         <Analytics />
-        <NoscrapeFontFace/>
-    </head>
-    <body className={"p-0"}>{children}</body>
+        <NoscrapeFontFace />
+      </head>
+      <body className="p-0">{children}</body>
     </html>
   );
 }

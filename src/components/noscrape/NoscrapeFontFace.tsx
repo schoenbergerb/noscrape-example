@@ -12,7 +12,7 @@ const NoscrapeFontFace = async () => {
         __html: `                          
           @font-face {        
             font-family: 'noscrape-obfuscated';        
-            src: url('data:font/truetype;charset=utf-8;base64,${noscrape.getFont().toString("base64")}');    
+            src: url('data:font/truetype;charset=utf-8;base64,${noscrape.getFont().toString("base64")}');
           }
         
           .noscrape-obfuscated {
@@ -23,5 +23,7 @@ const NoscrapeFontFace = async () => {
     ></style>
   );
 };
+
+
 
 export default NoscrapeFontFace;

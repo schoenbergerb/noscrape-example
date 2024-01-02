@@ -2,12 +2,15 @@
 
 import { useNoscrape } from "@/components/noscrape/noscrape.context";
 
-const Obfuscated = ({ label }: { label: string }) => {
+type Props = {
+  label: string,
+  className?: string
+}
+
+const Obfuscated = ({ label, className }: Props) => {
   const noscrape = useNoscrape();
 
-  return (
-    <span className="noscrape-obfuscated">{noscrape.obfuscate(label)}</span>
-  );
+  return <span className={`noscrape-obfuscated ${className}`}>{noscrape.obfuscate(label)}</span>;
 };
 
 export default Obfuscated;
