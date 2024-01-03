@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/style/globals.css";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import NoscrapeFontFace from "@/components/noscrape/NoscrapeFontFace";
