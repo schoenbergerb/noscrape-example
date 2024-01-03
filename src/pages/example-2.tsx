@@ -2,7 +2,8 @@ import {Noscrape} from "@noscrape/noscrape";
 import Head from "next/head";
 
 export async function getServerSideProps() {
-    const noscrape = new Noscrape("public/example.ttf")
+    console.log(__dirname)
+    const noscrape = new Noscrape(__dirname + "/../../../public/example.ttf")
 
     // Fetch data from external API or DB, whatever...
     const data = {
